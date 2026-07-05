@@ -1,0 +1,20 @@
+# Apple
+.DS_Store
+
+# LaTeX
+*.aux
+*.bcf
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.run.xml
+*synctex.gz
+*.toc
+*.glg
+*.glo
+*.gls
+*.ist
