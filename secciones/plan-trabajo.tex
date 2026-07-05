@@ -1,0 +1,67 @@
+\documentclass[../proyecto.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+% máximo 1 página
+
+\section{Plan de trabajo}
+
+Este plan de trabajo es tentativo y comprende dos grandes etapas: los primeros 2 años que incluyen investigación y cursos de postgrado realizados durante el Doctorado de Artes y Humanidades, y los siguientes 2 años que ocurren después de la defensa de la candidatura, continuando el trabajo ya realizado.
+
+\subsection{Plan de trabajo: primera mitad}
+
+\begin{ganttchart}[
+    x unit=0.5cm,
+    y unit chart=0.7cm,
+    vgrid,
+    hgrid,
+    bar height=0.6,
+]{1}{24}
+
+\gantttitle{2025}{12}
+\gantttitle{2026}{12} \\
+
+\gantttitlelist{1,...,12}{1}
+\gantttitlelist{1,...,12}{1} \\
+
+\ganttbar{Cursos doctorado}{3}{23} \\
+\ganttbar{Investigación bibliográfica}{3}{23} \\
+\ganttbar{Prototipado secuenciadores}{3}{8} \\
+\ganttbar{Prototipado relojes}{5}{10} \\
+\ganttbar{Prototipado osciladores}{8}{12} \\
+\ganttbar{Escritura proyecto de tesis}{13}{18} \\
+\ganttbar{Escritura defensa}{13}{23} \\
+\ganttbar{Prototipado carcasas}{13}{20} \\
+\ganttbar{Prototipado manuales}{20}{23}
+
+\end{ganttchart}
+
+
+\subsection{Plan de trabajo: segunda mitad}
+
+La segunda mitad comprende desde la defensa de la candidatura a fines del año 2026, hasta el fin del doctorado a fines del año 2028. Durante este periodo el énfasis estará puesto en la combinación entre investigación teórica y práctica, escritura de la tesis doctoral, trabajo docente en cursos de pregrado de diseño, entre otros.
+
+\begin{ganttchart}[
+    x unit=0.5cm,
+    y unit chart=0.7cm,
+    vgrid,
+    hgrid,
+    bar height=0.6,
+]{1}{24}
+
+\gantttitle{2027}{12}
+\gantttitle{2028}{12} \\
+
+\gantttitlelist{1,...,12}{1}
+\gantttitlelist{1,...,12}{1} \\
+
+\ganttbar{Prototipado módulos}{2}{7} \\
+\ganttbar{Escritura tesis borrador 1}{2}{7} \\
+\ganttbar{Escritura manuales de uso}{8}{11} \\
+\ganttbar{Escritura tesis borrador 2}{9}{13} \\
+\ganttbar{Preparación defensa}{9}{16} \\
+\ganttbar{Defensa de tesis doctoral}{20}{22}
+
+\end{ganttchart}
+
+\end{document}

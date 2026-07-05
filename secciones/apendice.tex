@@ -1,0 +1,74 @@
+\documentclass[../proyecto.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\section{Apéndice}
+
+% Se puede incorporar imágenes de obras, links a obras sonoras o audiovisuales, entrevistas, material de archivo, etc.
+
+\subsection{Módulo Relo}
+
+Relo es un módulo electrónico que está en desarrollo en el marco de esta tesis. Permite controlar la velocidad de una señal de reloj, usada comúnmente para controlar la velocidad de secuenciadores en un contexto de sintetizadores sonoros y visuales.
+
+Su primera versión fue realizada en junio 2026 y está siendo usada en aula por estudiantes de pregrado de Diseño de la Universidad Diego Portales, como parte de un sistema de sintetizadores modulares desarrollado en un curso.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./imagenes/relo-v0-pcb.png}
+    \caption{Placa diseñada del módulo Relo}
+    \label{fig:relo-pcb}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./imagenes/relo-vo.jpg}
+    \caption{Placa soldada del módulo Relo}
+    \label{fig:relo-foto}
+\end{figure}
+
+\section{Módulo Parla}
+
+Parla es un módulo electrónico en desarrollo durante esta tesis. Ha contado con el apoyo en diseño gráfico de Mateo Arce, y con apoyo en diseño de placas y estándares eléctricos de Matías Serrano.
+
+La primera iteración de enero 2026 fue hecha en versión mono el chip LM386, la segunda iteración en junio 2026 fue hecha en stereo con el chip PAM8403D.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./imagenes/parla-v0-rev-b-sch.png}
+    \caption{Esquemático de la segunda iteración del módulo Parla}
+    \label{fig:parla-sch}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./imagenes/parla-v0-rev-b-pcb.png}
+    \caption{Placa diseñada de la segunda iteración del módulo Parla}
+    \label{fig:parla-pcb}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./imagenes/parla-v0-rev-b.jpg}
+    \caption{Placa construida de la segunda iteración del módulo Parla}
+    \label{fig:parla-foto}
+\end{figure}
+
+\subsection{Maqui}
+
+Maqui es un secuenciador que se puede usar para controlar otros módulos de sonido.
+
+Este trabajo cuenta con la colaboración de la primera persona practicante que ha tenido la empresa Piruetas Spa, el diseñador Andrés Martin.
+
+\subsection{Allender}
+
+Allender es un sintetizador de tipo sampler, que está cargado con samples extraídos programáticamente de discursos del presidente Salvador Allende.
+
+El primer prototipo funciona como aplicación desktop, y se está trabajando en su porte a un sintetizador hardware, con la herramienta Daisy de ElectroSmith.
+
+\subsection{Silenkier}
+
+Silenkier es un sintetizador de tipo sampler, que está cargado con distintos samples de audio extraídos programáticamente de los discursos del actual presidente de Chile, que fueron percibidos como silencios por algoritmos de detección de habla.
+
+El primer prototipo funciona como aplicación desktop, y se está trabajando en su porte a un sintetizador hardware, con la herramienta Daisy de ElectroSmith.
+
+\end{document}
