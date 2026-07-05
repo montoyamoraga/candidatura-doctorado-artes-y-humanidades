@@ -20,7 +20,7 @@ jobs:
       - name: compilar PDF
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: v.tex
+          root_file: candidatura.tex
           args: -pdf -interaction=nonstopmode -jobname=candidatura
 
       - name: preparar sitio
