@@ -1,16 +1,9 @@
 name: compilar y subir PDFs
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'candidatura.tex'
-      - 'capitulos/**'
-      - 'secciones-formulario/**'
-      - 'biblio.bib'
-      - 'imagenes/**'
-      - 'diapos/**'
-      - '.github/workflows/compilar-pdf.yaml'
+  schedule:
+    - cron: '0 6 * * *'  # todas las noches a las 06:00 UTC
+  workflow_dispatch: {}
 
 permissions:
   contents: read
@@ -20,24 +13,49 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
 
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: revisar cambios recientes
+        id: check
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CHANGED=$(git log --since="24 hours ago" --oneline -- \
+            candidatura.tex capitulos secciones-formulario biblio.bib imagenes diapos \
+            | wc -l)
+
+          if [ "$CHANGED" -gt 0 ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: compilar tesis
+        if: steps.check.outputs.changed == 'true'
         uses: xu-cheng/latex-action@v3
         with:
           root_file: candidatura.tex
           args: -pdf -interaction=nonstopmode -jobname=candidatura
 
       - name: compilar diapos
+        if: steps.check.outputs.changed == 'true'
         uses: xu-cheng/latex-action@v3
         with:
           root_file: diapos/diapos.tex
           args: -pdf -interaction=nonstopmode -jobname=diapos
 
       - name: preparar sitio
+        if: steps.check.outputs.changed == 'true'
         run: |
           mkdir site
           cp candidatura.pdf site/candidatura.pdf
@@ -73,12 +91,14 @@ jobs:
           EOF
 
       - name: upload artifact for Pages
+        if: steps.check.outputs.changed == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
   deploy:
     needs: build
+    if: needs.build.outputs.changed == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
