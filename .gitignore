@@ -14,6 +14,9 @@
 *.run.xml
 *synctex.gz
 *.toc
+*.nav
+*.snm
+*.vrb
 *.glg
 *.glo
 *.gls
