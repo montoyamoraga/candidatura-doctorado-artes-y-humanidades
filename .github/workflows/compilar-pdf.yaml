@@ -69,24 +69,14 @@ jobs:
             <meta charset="utf-8">
             <title>montoyamoraga - candidatura tesis</title>
             <style>
-              body { font-family: sans-serif; margin: 0; }
-              nav { padding: 0.5rem 1rem; background: #222; }
-              nav button { margin-right: 0.5rem; padding: 0.4rem 0.8rem; }
-              iframe { width: 100%; height: calc(100vh - 3rem); border: none; display: block; }
+              body { font-family: sans-serif; margin: 2rem; }
+              a { display: block; margin-bottom: 0.5rem; }
             </style>
           </head>
           <body>
-            <nav>
-              <button onclick="loadPDF('candidatura.pdf')">tesis</button>
-              <button onclick="loadPDF('diapos.pdf')">diapos</button>
-            </nav>
-            <iframe id="viewer" src="candidatura.pdf"></iframe>
-
-            <script>
-              function loadPDF(file) {
-                document.getElementById('viewer').src = file;
-              }
-            </script>
+            <h1>montoyamoraga - candidatura tesis</h1>
+            <a href="candidatura.pdf">tesis (PDF)</a>
+            <a href="diapos.pdf">diapos (PDF)</a>
           </body>
           </html>
           EOF
