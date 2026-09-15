@@ -1,6 +1,11 @@
 \documentclass{beamer}
 \usepackage[spanish]{babel}
 \usepackage{noto}
+\usepackage{graphicx}
+
+% ruta donde estan las imagenes, relativa a este archivo (diapos/diapos.tex)
+% asi en \includegraphics no hay que escribir "../imagenes/" cada vez
+\graphicspath{{../imagenes/}}
 
 \title{Popusintesíntesis}
 \subtitle{Presentación candidatura de doctorado}
@@ -26,6 +31,52 @@
 
 \begin{frame}{Metodología}
   Placeholder.
+\end{frame}
+
+\section{Prototipos}
+
+% --- ejemplo 1: una sola imagen centrada en la diapositiva ---
+% \includegraphics[width=...]{archivo} : "width" controla el ancho.
+% "0.6\textwidth" quiere decir "60% del ancho del area de texto de la diapositiva".
+% probar valores como 0.4, 0.6, 0.8, 1.0 hasta que se vea bien.
+\begin{frame}{Módulo Relo}
+  \centering
+  \includegraphics[width=0.6\textwidth]{relo-vo.jpg}
+
+  Placa soldada del módulo Relo.
+\end{frame}
+
+% --- ejemplo 2: dos imagenes lado a lado, usando el entorno "columns" ---
+% cada \column tiene un ancho (aca 0.5, la mitad cada una) y adentro
+% se pone una imagen distinta. es el patron a copiar para comparar
+% dos fotos, o mostrar "diseño" vs "resultado final".
+\begin{frame}{Módulo Parla}
+  \begin{columns}
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{parla-v0-rev-b-pcb.png}
+
+      Placa diseñada
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{parla-v0-rev-b.jpg}
+
+      Placa construida
+  \end{columns}
+\end{frame}
+
+% --- ejemplo 3: imagen con overlay de texto encima (title + bullets) ---
+% se puede combinar imagen + \begin{itemize} normalmente, la imagen
+% es solo otro elemento mas dentro del frame.
+\begin{frame}{Módulo Parla: esquemático}
+  \includegraphics[width=0.5\textwidth]{parla-v0-rev-b-sch.png}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \begin{itemize}
+      \item Primera iteración (enero 2026): mono, chip LM386.
+      \item Segunda iteración (junio 2026): stereo, chip PAM8403D.
+    \end{itemize}
+  \end{minipage}
 \end{frame}
 
 \section{Resultados esperados}
