@@ -38,6 +38,11 @@
 
 \setbeamertemplate{navigation symbols}{}
 
+% ancho de columna para las etiquetas de la pagina de titulo (autore,
+% institución, fecha), calculado a partir de la etiqueta mas larga para
+% que todos los valores queden alineados al mismo indent
+\newlength{\anchoetiquetatitulo}
+
 % bullets simples, geometricos, sin simulacion de shell
 \setbeamertemplate{itemize item}{\textcolor{compuacento}{\scriptsize\textbullet}}
 \setbeamertemplate{itemize subitem}{\textcolor{compusecundario}{--}}
@@ -52,13 +57,11 @@
   \vspace{0.3em}
 }
 
-% pie de pagina: autor a la izquierda, numero de diapositiva a la derecha
+% pie de pagina: solo el numero de diapositiva, alineado a la derecha
 \setbeamertemplate{footline}{%
   \hbox{%
     \begin{beamercolorbox}[wd=\paperwidth, ht=2.5ex, dp=1.5ex, leftskip=1em, rightskip=1em]{footline}
-      \textcolor{compusecundario}{\insertshortauthor}
-      \hfill
-      \textcolor{compusecundario}{\insertframenumber\,/\,\inserttotalframenumber}
+      \hfill\textcolor{compusecundario}{\insertframenumber\,/\,\inserttotalframenumber}
     \end{beamercolorbox}%
   }
 }
@@ -75,9 +78,11 @@
   \vspace{1.2em}
 
   {\small
-    \textcolor{compusecundario}{autor}\hspace{1em}{\usebeamercolor[fg]{author}\insertauthor}\par
-    \textcolor{compusecundario}{institución}\hspace{1em}{\usebeamercolor[fg]{institute}\insertinstitute}\par
-    \textcolor{compusecundario}{fecha}\hspace{1em}{\usebeamercolor[fg]{date}\insertdate}\par
+    \settowidth{\anchoetiquetatitulo}{institución}%
+    \addtolength{\anchoetiquetatitulo}{1em}%
+    \makebox[\anchoetiquetatitulo][l]{\textcolor{compusecundario}{autore}}{\usebeamercolor[fg]{author}\insertauthor}\par
+    \makebox[\anchoetiquetatitulo][l]{\textcolor{compusecundario}{institución}}{\usebeamercolor[fg]{institute}\insertinstitute}\par
+    \makebox[\anchoetiquetatitulo][l]{\textcolor{compusecundario}{fecha}}{\usebeamercolor[fg]{date}\insertdate}\par
   }
 }
 
