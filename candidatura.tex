@@ -11,6 +11,18 @@
 \addbibresource{biblio.bib}
 \usepackage{pgfgantt}
 
+% marcador para capítulos en borrador
+\newcommand{\esborrador}{}
+
+% \capitulo{nombre} incluye capitulos/nombre.tex,
+% excepto si el archivo contiene \esborrador
+\ExplSyntaxOn
+\NewDocumentCommand{\capitulo}{m}{
+	\file_get:nnN {capitulos/#1.tex} {} \l_tmpa_tl
+	\tl_if_in:NnF \l_tmpa_tl {\esborrador} { \subfile{capitulos/#1.tex} }
+}
+\ExplSyntaxOff
+
 \begin{document}
 
 \begin{titlepage}
@@ -40,38 +52,35 @@
 
 \newpage
 
-\subfile{capitulos/sintesis-sonora.tex}
-\subfile{capitulos/sintesintesis-sonora.tex}
-\subfile{capitulos/popusintesintesis-sonora.tex}
-
-% \begin{enumerate}
-%     \item Módulos
-%     \item Metáforas
-%     \item Taxonomías
-%     \item Relojes
-%     \item Secuenciadores
-%     \item Osciladores
-%     \item Filtros
-%     \item Envolventes
-%     \item Amplificadores
-%     \item Moduladores
-%     \item Efectos
-%     \item Parlantes
-%     \item Controladores
-%     \item Interfaces
-%     \item Soldaduras
-%     \item Variables
-%     \item Funciones
-%     \item Bibliotecas
-%     \item Documentación
-%     \item Prototipado
-%     \item Conectores
-%     \item Carcasas
-%     \item Manuales
-%     \item Reparaciones
-%     \item Mantenimientos
-%     \item Partituras
-% \end{enumerate}
+\capitulo{01-sintesis-sonora}
+\capitulo{02-sintesintesis-sonora}
+\capitulo{03-popusintesintesis-sonora}
+\capitulo{04-modulos}
+\capitulo{05-metaforas}
+\capitulo{06-taxonomias}
+\capitulo{07-relojes}
+\capitulo{08-secuenciadores}
+\capitulo{09-osciladores}
+\capitulo{10-filtros}
+\capitulo{11-envolventes}
+\capitulo{12-amplificadores}
+\capitulo{13-moduladores}
+\capitulo{14-efectos}
+\capitulo{15-parlantes}
+\capitulo{16-controladores}
+\capitulo{17-interfaces}
+\capitulo{18-soldaduras}
+\capitulo{19-variables}
+\capitulo{20-funciones}
+\capitulo{21-bibliotecas}
+\capitulo{22-documentacion}
+\capitulo{23-prototipado}
+\capitulo{24-conectores}
+\capitulo{25-carcasas}
+\capitulo{26-manuales}
+\capitulo{27-reparaciones}
+\capitulo{28-mantenimientos}
+\capitulo{29-partituras}
 
 
 
