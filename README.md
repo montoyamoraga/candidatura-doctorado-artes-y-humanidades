@@ -1,6 +1,6 @@
 # candidatura-doctorado-artes-y-humanidades
 
-Candidatura de doctorado  para el programa de Artes y Humanidades del Instituto de Estudios Avanzados, Universidad de Santiago de Chile. Proyecto: "Popusintesíntesis", por Aarón Montoya Moraga.
+Candidatura de doctorado para el programa de Artes y Humanidades del Instituto de Estudios Avanzados, Universidad de Santiago de Chile. Proyecto: "Popusintesíntesis", por Aarón Montoya Moraga.
 
 ## Estructura
 
