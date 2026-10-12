@@ -54,7 +54,7 @@ ya sabes de qué trata. este tipo de textos te ayudan a orientar la creación te
 
 `Julio Mendívil, En Contra de La Música: Herramientas Para Pensar, Comprender y Vivir Las Músicas, 3ra edición corregida (Gourmet Musical Ediciones, 2023).`
 
-menciona hartas cosas que se dan por obvias en la música, pero que tienen orígenes culturales específicos. 
+menciona hartas cosas que se dan por obvias en la música, pero que tienen orígenes culturales específicos.
 
 `Trevor J. Pinch y Frank Trocco, Analog Days: The Invention and Impact of the Moog Synthesizer (Harvard University Press, 2009).`
 
@@ -72,7 +72,7 @@ este es más filosófico, pero si te interesa cuestionar la idea de la simpleza 
 
 `Marie Bardet, «Hacer mundos con gestos», en El cultivo de los gestos: Entre plantas, animales y humanos, 1.ª ed., de André Haudricourt y Pablo Ires, Pequeña Biblioteca Sensible (Cactus, 2019).`
 
-esta es deleuziana (igual que delanda), habla de que no puedes separar a quien hace el gesto del material que es gestualizado (como una herramienta, labrar la tierra, etcétera). todes participan del mismo mundo 
+esta es deleuziana (igual que delanda), habla de que no puedes separar a quien hace el gesto del material que es gestualizado (como una herramienta, labrar la tierra, etcétera). todes participan del mismo mundo
 
 `André Leroi-Gourhan, El gesto y la palabra, trad. Felipe Carrera (Editions Albin Michel, 1965; repr., Ediciones Biblioteca Central de Venezuela, 1971).`
 
