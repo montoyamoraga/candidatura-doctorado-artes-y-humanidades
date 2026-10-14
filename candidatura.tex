@@ -14,6 +14,21 @@
 \setcounter{biburlucpenalty}{100}
 \setcounter{biburllcpenalty}{100}
 \usepackage{pgfgantt}
+\usepackage[most]{tcolorbox}
+
+% comentarios de revisión, visibles en el PDF como recuadros de color;
+% cambiar a \mostrarcomentariosfalse para ocultarlos en la versión final
+\newif\ifmostrarcomentarios
+\mostrarcomentariostrue
+\ifmostrarcomentarios
+	\NewDocumentEnvironment{comentario}{m}{%
+		\begin{tcolorbox}[breakable, colback=yellow!12, colframe=orange!70!black,
+			fonttitle=\bfseries\small, fontupper=\small\itshape,
+			title={Comentario de #1}]%
+	}{\end{tcolorbox}}
+\else
+	\NewDocumentEnvironment{comentario}{m+b}{}{}
+\fi
 % marcadores (outline) del PDF; hyperref va al final del preámbulo
 \usepackage[hidelinks,bookmarksopen,bookmarksnumbered,pdfpagemode=UseOutlines]{hyperref}
 
