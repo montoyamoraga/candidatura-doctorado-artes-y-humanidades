@@ -40,6 +40,13 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: convertir svg a pdf
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends inkscape
+          bash scripts/convertir-svg.sh
+
       - name: compilar tesis
         if: steps.check.outputs.changed == 'true'
         uses: xu-cheng/latex-action@v3

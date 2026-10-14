@@ -30,6 +30,16 @@ cd diapos
 latexmk -pdf -interaction=nonstopmode -jobname=diapos diapos.tex
 ```
 
+### Imágenes SVG
+
+`pdflatex` no lee SVG, así que cada `.svg` en `imagenes/` se convierte a un `.pdf` al lado (recortado al dibujo), que es el que se incluye con `\includegraphics`. Los PDFs no se versionan; se generan con Inkscape 1.x:
+
+```sh
+./scripts/convertir-svg.sh
+```
+
+Solo reconvierte los SVG que son más nuevos que su PDF. El workflow de integración continua lo ejecuta antes de compilar.
+
 ## Integración continua y GitHub Pages
 
 El workflow en [.github/workflows/compilar-pdf.yaml](.github/workflows/compilar-pdf.yaml) compila `candidatura.tex` y `diapos/diapos.tex` cada noche (o manualmente vía
