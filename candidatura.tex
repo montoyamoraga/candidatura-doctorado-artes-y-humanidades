@@ -35,6 +35,15 @@
 % marcador para capítulos en borrador
 \newcommand{\esborrador}{}
 
+% aviso al inicio de los capítulos que son esbozos en escritura
+\newcommand{\avisoesbozo}{%
+	\begin{tcolorbox}[colback=gray!8, colframe=gray!60!black,
+		fonttitle=\bfseries\small, fontupper=\small,
+		title={Aviso}]
+		Este capítulo es un esbozo inicial de la tesis, actualmente en escritura. Su contenido es preliminar e incompleto, y se incluye como muestra del trabajo en curso.
+	\end{tcolorbox}%
+}
+
 % \capitulo{nombre} incluye capitulos/nombre.tex,
 % excepto si el archivo contiene \esborrador
 \ExplSyntaxOn
