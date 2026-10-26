@@ -149,8 +149,15 @@ La primera iteración de enero de 2026 fue hecha en versión mono con el chip LM
 
 
 \subsection{Prototipado computacional}
+\label{subsec:prototipado-computacional}
 
-Se ha realizado investigación de nuevas formas de automatización computacional, incluyendo la escritura de código y la creación automatizada de documentación, además de estrategias de publicación de bibliotecas de código. Se han ya publicado los primeros prototipos de bibliotecas y herramientas en repositorios públicos.
+Se ha realizado investigación de nuevas formas de automatización computacional, incluyendo la escritura de código y la creación automatizada de documentación, además de estrategias de publicación de bibliotecas de código. Ya se han publicado los primeros prototipos de bibliotecas y herramientas en repositorios públicos.
+
+Este trabajo está publicado en la organización piruetasxyz en GitHub, escrito en C++ y con licencia MIT.
+
+La colección de Popusintes \footcite{piruetas_popusintesrack_2026} es una línea de sintetizadores en formato Eurorack virtual para el software VCV Rack, que modela en código los módulos electrónicos de esta tesis. Incluye relojes, secuenciadores, osciladores de ondas rectangulares, generadores de envolventes, comparadores y mezcladores. Sus criterios de diseño son parte de la investigación: los módulos están en español y con lenguaje no militar, cada uno tiene dos canales de salida, se evitan las simetrías y las sincronizaciones, y hay luces.
+
+En paralelo, se han publicado bibliotecas de elementos interfásicos para microcontroladores, compatibles con placas Arduino y Raspberry Pi Pico, tanto desde el entorno Arduino IDE como desde el Pico SDK. La biblioteca Boton \footcite{piruetas_boton_2026} lee botones con antirrebote incluido. La biblioteca Perilla \footcite{piruetas_perilla_2026} lee potenciómetros y encoders, mapea su valor a otros rangos, e incluye un filtro opcional anti ruido de lectura. La biblioteca Microfono \footcite{piruetas_microfono_2026} lee micrófonos electret y mide la amplitud del sonido, con una función para calibrar el umbral de silencio, ya que, como declara su documentación, el silencio es una decisión; está disponible en el registro de bibliotecas de Arduino IDE. Cada biblioteca incluye ejemplos y documentación en español, para que pueda ser usada por estudiantes y artistas sin formación técnica especializada.
 
 \subsection{Cursos de electrónica y computación}
 
