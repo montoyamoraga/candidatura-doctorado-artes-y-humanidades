@@ -16,7 +16,7 @@ Chufe es un módulo de alimentación para sintetizadores del estándar Eurorack.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{./imagenes/chufe/chufe-esquematico.pdf}
+    \includegraphics[width=\textwidth,trim={62bp 0 0 0},clip]{./imagenes/chufe/chufe-esquematico.pdf}
     \caption{Esquemático del módulo Chufe}
     \label{fig:chufe-esquematico}
 \end{figure}
@@ -25,7 +25,7 @@ Chufe es un módulo de alimentación para sintetizadores del estándar Eurorack.
     \centering
     \begin{minipage}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{./imagenes/chufe/chufe-placa.pdf}
+        \includegraphics[height=5.5cm,trim={14bp 135bp 345bp 14bp},clip]{./imagenes/chufe/chufe-placa.pdf}
         \caption{Placa diseñada del módulo Chufe}
         \label{fig:chufe-placa}
     \end{minipage}
@@ -75,7 +75,7 @@ También se puede tomar la decisión de comercializar estas fuentes de poder a p
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{./imagenes/chufebu/chufebu-esquematico.pdf}
+    \includegraphics[width=\textwidth,trim={62bp 0 0 0},clip]{./imagenes/chufebu/chufebu-esquematico.pdf}
     \caption{Esquemático del módulo Chufebu}
     \label{fig:chufebu-esquematico}
 \end{figure}
@@ -84,7 +84,7 @@ También se puede tomar la decisión de comercializar estas fuentes de poder a p
     \centering
     \begin{minipage}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=1\linewidth]{./imagenes/chufebu/chufebu-placa.pdf}
+        \includegraphics[width=1\linewidth,trim={28bp 187bp 190bp 19bp},clip]{./imagenes/chufebu/chufebu-placa.pdf}
         \caption{Placa diseñada del módulo Chufebu}
         \label{fig:chufebu-placa}
     \end{minipage}
@@ -137,7 +137,7 @@ La primera iteración de enero de 2026 fue hecha en versión mono con el chip LM
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth,height=5cm,keepaspectratio]{./imagenes/parla-v0-rev-b-sch.png}
+    \includegraphics[width=0.8\textwidth,height=5.5cm,keepaspectratio,trim={450bp 650bp 800bp 1450bp},clip]{./imagenes/parla-v0-rev-b-sch.png}
     \caption{Esquemático de la segunda iteración del módulo Parla}
     \label{fig:parla-sch}
 \end{figure}
@@ -172,7 +172,7 @@ Este trabajo está publicado en la organización piruetasxyz en GitHub, escrito 
 
 La colección de Popusintes \footcite{piruetas_popusintesrack_2026} es una línea de sintetizadores en formato Eurorack virtual para el software VCV Rack, que modela en código los módulos electrónicos de esta tesis. Incluye relojes, secuenciadores, osciladores de ondas rectangulares, generadores de envolventes, comparadores y mezcladores. Sus criterios de diseño son parte de la investigación: los módulos están en español y con lenguaje no militar, cada uno tiene dos canales de salida, se evitan las simetrías y las sincronizaciones, y hay luces.
 
-En paralelo, se han publicado bibliotecas de elementos interfásicos para microcontroladores, compatibles con placas Arduino y Raspberry Pi Pico, tanto desde el entorno Arduino IDE como desde el Pico SDK. La biblioteca Boton \footcite{piruetas_boton_2026} lee botones con antirrebote incluido. La biblioteca Perilla \footcite{piruetas_perilla_2026} lee potenciómetros y encoders, mapea su valor a otros rangos, e incluye un filtro opcional anti ruido de lectura. La biblioteca Microfono \footcite{piruetas_microfono_2026} lee micrófonos electret y mide la amplitud del sonido, con una función para calibrar el umbral de silencio, ya que, como declara su documentación, el silencio es una decisión; está disponible en el registro de bibliotecas de Arduino IDE. Cada biblioteca incluye ejemplos y documentación en español, para que pueda ser usada por estudiantes y artistas sin formación técnica especializada.
+En paralelo, se han publicado bibliotecas de elementos interfásicos para microcontroladores, compatibles con placas Arduino y Raspberry Pi Pico, tanto desde el entorno Arduino IDE como desde el Pico SDK. La biblioteca Boton \footcite{piruetas_boton_2026} lee botones con antirrebote incluido. La biblioteca Perilla \footcite{piruetas_perilla_2026} lee potenciómetros y encoders, mapea su valor a otros rangos, e incluye un filtro opcional antirruido de lectura. La biblioteca Microfono \footcite{piruetas_microfono_2026} lee micrófonos electret y mide la amplitud del sonido, con una función para calibrar el umbral de silencio, ya que, como declara su documentación, el silencio es una decisión; está disponible en el registro de bibliotecas de Arduino IDE. Cada biblioteca incluye ejemplos y documentación en español, para que pueda ser usada por estudiantes y artistas sin formación técnica especializada.
 
 \subsection{Cursos de electrónica y computación}
 
