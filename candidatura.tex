@@ -17,6 +17,8 @@
 \setcounter{biburlucpenalty}{100}
 \setcounter{biburllcpenalty}{100}
 \usepackage{pgfgantt}
+% \FloatBarrier, para que las figuras no crucen a la subsección siguiente
+\usepackage{placeins}
 % reglas de colocación de figuras más flexibles, para evitar páginas
 % con solo figuras y mucho espacio en blanco
 \renewcommand{\topfraction}{0.85}
@@ -93,7 +95,8 @@
 	\vfill
 
 % final de pagina
-	{\large \today\par}
+	% fecha fija de entrega (antes \today, que cambiaba con cada compilación)
+	{\large 26 de octubre de 2026\par}
 \end{titlepage}
 
 \newpage
