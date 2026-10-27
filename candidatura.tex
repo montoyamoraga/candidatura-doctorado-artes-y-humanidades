@@ -10,11 +10,25 @@
 \usepackage{csquotes}
 \usepackage[backend=biber, style=authoryear]{biblatex}
 \addbibresource{biblio.bib}
+% fecha de la etiqueta: sin usar urldate, para que las fuentes sin fecha digan "s.f."
+% en vez del año de consulta
+\DeclareLabeldate{\field{date}\field{year}\field{eventdate}\field{origdate}\literal{nodate}}
 \setcounter{biburlnumpenalty}{100}
 \setcounter{biburlucpenalty}{100}
 \setcounter{biburllcpenalty}{100}
 \usepackage{pgfgantt}
 \usepackage[most]{tcolorbox}
+% ancho de los números en el índice, para que "10." no choque con el título
+\usepackage{tocloft}
+\setlength{\cftsecnumwidth}{2.2em}
+\setlength{\cftsubsecindent}{2.2em}
+\setlength{\cftsubsecnumwidth}{3em}
+\setlength{\cftsubsubsecindent}{5.2em}
+\setlength{\cftsubsubsecnumwidth}{3.8em}
+% punto después del número, igual que en los títulos del cuerpo
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\renewcommand{\cftsubsubsecaftersnum}{.}
 
 % comentarios de revisión, visibles en el PDF como recuadros de color;
 % cambiar a \mostrarcomentariosfalse para ocultarlos en la versión final
